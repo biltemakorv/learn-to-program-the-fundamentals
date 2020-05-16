@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30105.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Learn to program the fundamentals", "Learn to program the fundamentals.pyproj", "{444478A5-FF61-4DD8-843F-73ED61FFD802}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{444478A5-FF61-4DD8-843F-73ED61FFD802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444478A5-FF61-4DD8-843F-73ED61FFD802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C47BB32D-736B-4232-8E2D-D855035DAC7B}
+	EndGlobalSection
+EndGlobal
