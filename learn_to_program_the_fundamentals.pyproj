@@ -5,7 +5,7 @@
     <ProjectGuid>444478a5-ff61-4dd8-843f-73ed61ffd802</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>A1_time_zones.py</StartupFile>
+    <StartupFile>a1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="A1_time_zones.py" />
+    <Compile Include="a1.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
