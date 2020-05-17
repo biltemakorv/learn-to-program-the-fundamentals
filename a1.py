@@ -94,7 +94,7 @@ def get_minutes(seconds):
 ### Write your get_seconds function definition here:
 def get_seconds(seconds):
 
-    return 
+    return (seconds%3600)%60
 
 
 
