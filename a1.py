@@ -31,7 +31,6 @@ def hours_difference(time_1, time_2):
     >>> hours_difference(1800.0, 1800.0)
     0.0
     """
-    #return (time_2/3600)-(time_1/3600)
     return (time_2-time_1)/3600
 
 
@@ -124,6 +123,8 @@ def time_to_utc(utc_offset, time):
     0.0
     """
 
+    return (time-utc_offset)%24
+
 
 
 def time_from_utc(utc_offset, time):
@@ -148,7 +149,7 @@ def time_from_utc(utc_offset, time):
     >>> time_from_utc(+1, 23.0)
     0.0
     """
-
+    return (time+utc_offset)%24
 
 
 
