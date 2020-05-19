@@ -90,4 +90,16 @@ def get_complement(nucleotide):
     elif nucleotide == 'T':
         return 'A'
 
-def get_complementary_sequence()
+def get_complementary_sequence(dna):
+    '''
+    (str) -> str	
+ 	
+    '''
+    complement = ''
+
+    for char in dna:
+        complement += get_complement(char)
+
+    return complement
+
+
