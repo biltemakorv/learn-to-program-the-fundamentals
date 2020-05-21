@@ -24,9 +24,13 @@
   <ItemGroup>
     <Compile Include="a1.py" />
     <Compile Include="a2.py" />
+    <Compile Include="a3.py" />
+    <Compile Include="a3_driver.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="board1.txt" />
     <Content Include="In-Flanders-Fields.txt" />
+    <Content Include="wordlist1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
