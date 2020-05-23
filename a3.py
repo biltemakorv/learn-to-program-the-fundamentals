@@ -111,7 +111,8 @@ def board_contains_word(board, word):
     >>> board_contains_word([['A', 'N', 'T', 'T'], ['X', 'S', 'O', 'B']], 'ANT')
     True
     """
-
+    if board_contains_word_in_column(board, word) or board_contains_word_in_row(board, word):
+        return True
 
 def word_score(word):
     """ (str) -> int
@@ -126,8 +127,18 @@ def word_score(word):
     >>> word_score('DRUDGERY')
     16
     """
+    word_length = len(word)
+    points = 0
 
+    if 3 <= word_length <= 6:
+        points = len(word)
+    elif 7 <= word_length <= 9:
+        points = len(word)*2
+    elif 10 <= word_length:
+        points = len(word)*3
 
+    return points
+    
 def update_score(player_info, word):
     """ ([str, int] list, str) -> NoneType
 
