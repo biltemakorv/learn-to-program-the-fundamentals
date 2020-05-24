@@ -22,11 +22,12 @@ def is_valid_word(wordlist, word):
     >>> is_valid_word(['ANT', 'BOX', 'SOB', 'TOO'], 'TO')
     True
     """
-    for item in wordlist:
-        if word in item:
-            return True
-    
-    return False  
+
+
+    if word in wordlist:
+        return True
+    else:
+        return False  
 
 def make_str_from_row(board, row_index):
     """ (list of list of str, int) -> str
@@ -76,7 +77,7 @@ def board_contains_word_in_row(board, word):
     for row_index in range(len(board)):
         if word in make_str_from_row(board, row_index):
             return True
-
+    
     return False
 
 
@@ -98,7 +99,7 @@ def board_contains_word_in_column(board, word):
     for row_index in range(len(board[0])):
         if word in make_str_from_column(board, row_index):
             return True
-
+  
     return False
 
 def board_contains_word(board, word):
@@ -113,6 +114,8 @@ def board_contains_word(board, word):
     """
     if board_contains_word_in_column(board, word) or board_contains_word_in_row(board, word):
         return True
+  
+    return False
 
 def word_score(word):
     """ (str) -> int
@@ -161,6 +164,13 @@ def num_words_on_board(board, words):
     >>> num_words_on_board([['A', 'N', 'T', 'T'], ['X', 'S', 'O', 'B']], ['ANT', 'BOX', 'SOB', 'TO'])
     3
     """
+    counter = 0
+
+    for index in words:
+        if board_contains_word(board, index):
+            counter +=1
+
+    return counter
 
 
 def read_words(words_file):
@@ -172,7 +182,24 @@ def read_words(words_file):
     Precondition: Each line of the file contains a word in uppercase characters
     from the standard English alphabet.
     """
+    
+    
+    #filename = words_file
+    #file = open(filename, 'r')
+    #text = file.readlines()
 
+    file = words_file
+    text = file.readlines()
+    
+    word_list = []
+
+    for word in text:
+
+        word_list.append(word.rstrip('\n'))
+
+    file.close()
+
+    return word_list
 
 def read_board(board_file):
     """ (file open for reading) -> list of list of str
@@ -181,3 +208,23 @@ def read_board(board_file):
     one row of the board per line. Newlines are not included in the board.
     """
 
+
+    row_lst = read_words(board_file)
+    new_lst = []
+
+    for row in row_lst:
+        new_lst.append([row])
+
+    return new_lst
+
+
+    #row_lst = read_words(board_file)
+    #new_lst = []
+
+    #for item in row_lst:
+    #    for subitem in item:
+    #        new_lst.append([subitem])
+
+    #return new_lst
+
+        
