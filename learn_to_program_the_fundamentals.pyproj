@@ -5,7 +5,7 @@
     <ProjectGuid>444478a5-ff61-4dd8-843f-73ed61ffd802</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>a2.py</StartupFile>
+    <StartupFile>a3_driver.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

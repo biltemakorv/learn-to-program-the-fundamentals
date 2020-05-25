@@ -209,22 +209,21 @@ def read_board(board_file):
     """
 
 
-    row_lst = read_words(board_file)
-    new_lst = []
+    string_list = read_words(board_file)
+    list_of_list = []
+    
+    for x in range(len(string_list)):
+        temp_list = []
+        
+        for y in range(len(string_list[0])):
+            temp_list.append(string_list[x][y])
+        
+        list_of_list.append(temp_list)
 
-    for row in row_lst:
-        new_lst.append([row])
 
-    return new_lst
+    return list_of_list
 
 
-    #row_lst = read_words(board_file)
-    #new_lst = []
 
-    #for item in row_lst:
-    #    for subitem in item:
-    #        new_lst.append([subitem])
-
-    #return new_lst
 
         
